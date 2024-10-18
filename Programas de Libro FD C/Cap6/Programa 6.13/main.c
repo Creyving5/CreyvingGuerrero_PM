@@ -5,23 +5,23 @@
 
 const int MES = 12;
 const int DEP = 3;
-const int AÑO = 8;
+const int ANO = 8;
 
-void Lectura(float [MES][DEP][AÑO], int, int, int);
-void Funcion1(float [MES][DEP][AÑO], int, int, int);
-void Funcion2(float [MES][DEP][AÑO], int, int, int);    //Prototipos de funciones.
-void Funcion3(float [MES][DEP][AÑO], int, int, int);
+void Lectura(float [MES][DEP][ANO], int, int, int);
+void Funcion1(float [MES][DEP][ANO], int, int, int);
+void Funcion2(float [MES][DEP][ANO], int, int, int);    //Prototipos de funciones.
+void Funcion3(float [MES][DEP][ANO], int, int, int);
 
 void main(void)
 {
-float PRO[MES][DEP][AÑO];
-Lectura(PRO, MES, DEP, AÑO);
+float PRO[MES][DEP][ANO];
+Lectura(PRO, MES, DEP, ANO);
 Funcion1(PRO, MES, DEP, 2);
-Funcion2(PRO, MES, DEP, AÑO);
-Funcion3(PRO, MES, DEP, AÑO);
+Funcion2(PRO, MES, DEP, ANO);
+Funcion3(PRO, MES, DEP, ANO);
 }
 
-void Lectura(float A[][DEP][AÑO], int F, int C, int P)
+void Lectura(float A[][DEP][ANO], int F, int C, int P)
 //La funcion Lectura se utiliza para leer un arreglo tridimensional de tipo real de F filas, C columnas y P planos de profundidad.
 {
     int K, I, J;
@@ -35,7 +35,7 @@ void Lectura(float A[][DEP][AÑO], int F, int C, int P)
 
 }
 
-void Funcion1(float A[][DEP][AÑO], int F, int C, int P)
+void Funcion1(float A[][DEP][ANO], int F, int C, int P)
 //Esta funcion se utiliza para obtener las ventas totales de la empresa en el segundo ano.
 {
     int I, J;
@@ -46,7 +46,7 @@ void Funcion1(float A[][DEP][AÑO], int F, int C, int P)
     printf("\n\nVentas totales de la empresa en el segundo ano: %.2f", SUM);
 }
 
-void Funcion2(float A[][DEP][AÑO],int F, int C, int P)
+void Funcion2(float A[][DEP][ANO],int F, int C, int P)
 //Esta funcion se utiliza para obtener el departamento que tuvo las mayores ventas en el ultimo ano. Genera ademas el importe de las ventas.
 {
     int I, J;
@@ -74,7 +74,7 @@ void Funcion2(float A[][DEP][AÑO],int F, int C, int P)
         printf(" Ventas:%.2f", SUM3);
     }
     else
-        if (SUM > SUM3)
+        if (SUM2 > SUM3)
     {
         printf("\n\nDepartamento con mayores ventas en el ultimo ano: Lanas");
         printf(" Ventas:%.2f", SUM2);
@@ -86,7 +86,7 @@ void Funcion2(float A[][DEP][AÑO],int F, int C, int P)
     }
 }
 
-void Funcion3(float A[][DEP][AÑO],int F, int C, int P)
+void Funcion3(float A[][DEP][ANO],int F, int C, int P)
 //Esta funcion se utiliza para obtener el departamento, mes y ano con la mayor venta. Escribe tambien el monto de las ventas.
 {
     int K, I, J, DE, ME, AN;
